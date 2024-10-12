@@ -25,6 +25,7 @@ class HomeScreen extends StatefulWidget implements AutoRouteWrapper {
   @override
   Widget wrappedRoute(BuildContext context) {
     return BlocProvider<HomeCubit>(
+      lazy: false,
       create: (BuildContext context) => getIt.get<HomeCubit>(),
       child: this,
     );
